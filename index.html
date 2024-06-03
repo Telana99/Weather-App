@@ -37,5 +37,28 @@
 
     </div>
 </div>
+
+<script>
+
+const apiKey = "a0bdcb111564540b64c10bd4744d5af8";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=bangalore";
+
+async function checkWeather(){
+    const response = await fetch(apiUrl + `&appid=${apiKey}`);
+    var data = await response.json();//this will have all the data about city
+
+    //get those data into console
+    console.log(data);
+
+    //when calling the function like below we can get the data into console.
+    //now we have to ge the data into app for temp,city and other details..
+
+}
+
+checkWeather();//we have to call the funnction other wise it is not displayed on the console.
+
+</script>
+
+
 </body> 
 </html>
